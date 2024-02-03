@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.scene {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #87CEEB; /* light blue sky */
+}
+
+.sky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, #87CEEB, #4682B4); /* gradient sky */
+  animation: animateSky 10s linear infinite;
+}
+
+.cloud {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: animateCloud 20s linear infinite;
+}
+
+.cloud:nth-child(1) {
+  width: 80px;
+  height: 40px;
+  top: 20%;
+  left: 10%;
+}
+
+.cloud:nth-child(2) {
+  width: 120px;
+  height: 60px;
+  top: 15%;
+  left: 50%;
+}
+
+.cloud:nth-child(3) {
+  width: 100px;
+  height: 50px;
+  top: 25%;
+  left: 80%;
+}
+
+.mountains {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: #556B2F; /* dark green mountains */
+}
+
+.ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background: #8B4513; /* brown ground */
+}
+
+@keyframes animateCloud {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes animateSky {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
